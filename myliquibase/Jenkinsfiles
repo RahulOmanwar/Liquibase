@@ -1,8 +1,8 @@
 node{
 	stage('SCM Checkout'){
 	 git 'https://github.com/RahulOmanwar/Liquibase.git'
+
+	 sh 'mvn clean install '
+
 	}
-	stage('Compile-Package'){
-	  sh 'mvn install'
-        }
 }
