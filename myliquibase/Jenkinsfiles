@@ -1,8 +1,21 @@
-node{
-	stage('SCM Checkout'){
-	 git 'https://github.com/RahulOmanwar/Liquibase.git'
+pipeline {
+    agent any
 
-	 sh 'mvn clean install '
-
-	}
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
